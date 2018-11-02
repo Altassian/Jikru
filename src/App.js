@@ -27,19 +27,33 @@ class App extends Component {
 
   render() {
     return (
-      <div className="" >
-      <div className="App" style={{borderBottom:"1px solid black"}}>
+      <div className="App" >
+      <div className="" style={{borderBottom:""}}>
         <header className="App-header">
           <a
             className="App-link"
             href="localhost:3000"
             target="_blank"
             rel="noopener noreferrer"
+            style={{textDecoration:"none"}}
           >
-            JIKRU 
+            J &nbsp;&nbsp;&nbsp;
+            I &nbsp;&nbsp;&nbsp;   
+            K &nbsp;&nbsp;&nbsp;   
+            R &nbsp;&nbsp;&nbsp;   
+            U 
           </a>
         </header>
-        <div className="why" style={{marginLeft:"10px", width:"39%",float:"left", paddingTop:"12px"}}>
+        <div className="App" >
+        
+        <div className="game">
+          <h2>Mental Math</h2>
+          <Game handleAnswer={this.handleAnswer} />
+	        <Score numCorrect={this.state.correctAnswer} numQuestions={this.state.numQuestions} />
+        </div>
+        </div>
+        </div>
+        {/* <div className="why" style={{marginLeft:"10px", width:"39%",float:"left", paddingTop:"12px"}}>
           <h2 style={{color:"black"}}>Why Jikru...</h2>
             <h4>Daily 10 min calculation practice :</h4>
               Improves brain's strength<br />
@@ -55,15 +69,7 @@ class App extends Component {
               Drink (Water, Juices) - improves blood circulation to brain.<br />
               Solve Puzzles <br />
               <br />
-          </div>
-        <div className="game" style={{width:"60%",float:"left"}}>
-          <h2>Mental Math</h2>
-          <Game handleAnswer={this.handleAnswer} />
-	        <Score numCorrect={this.state.correctAnswer} numQuestions={this.state.numQuestions} />
-        </div>
-        
-        </div>
-        
+          </div> */}
       </div>
     );
   }
